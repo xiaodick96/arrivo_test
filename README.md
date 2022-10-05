@@ -4,6 +4,12 @@ Here is the information for this project.
 
 May test on the website: https://b59qfht3fd.execute-api.ap-southeast-1.amazonaws.com/dev/loginpage
 
+Admin id -> admin, pw -> admin
+
+Normal id -> normal, pw -> normal
+
+Premium id -> premium, pw -> premium
+
 # Environment
 1. AWS Lambda
 2. AWS RDS(Singapore) -- Mysql![image](https://user-images.githubusercontent.com/33863094/194051732-8ae57fe7-ec2c-4bd6-a610-f75c4bf2561a.png)
@@ -69,7 +75,7 @@ Then will run the **index.js**, and will starting up the project.
 1. Visit Other User Profile / Edit Own User Data (If go to other edit pages, will be redirect to home page after click the submit button)
 2. Premium : See All Post, Normal : See Normal Post
 3. See all Category Type
-4. Normal User can Purchase Premium member in their profile page, Premium wont show out the Purchase Premium button
+4. Normal User can Purchase Premium member in their profile page, Premium wont show out the Purchase Premium button (Before Purchase Premium Member need make sure the user **Email** is correct type)
 
 # MySQL Access Credentials
 
