@@ -16,7 +16,6 @@ module.exports = {
         UserModel.getUser(id, function(data) {
             createbill(req.session.user, data.Email, function(callback) {
                 req.session.premiumuserid = id
-                console.log(callback)
                 return res.redirect(callback)
             })
         })

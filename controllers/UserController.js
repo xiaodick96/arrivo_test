@@ -14,7 +14,6 @@ module.exports = {
         if (req.session.authlogin) {
             let { id } = req.params;
             UserModel.getUser(id, function(data) {
-                console.log(req.session.membership)
                 if (req.session.membership == 'Admin') {
                     admin = true
                 } else {
@@ -25,7 +24,6 @@ module.exports = {
                 } else {
                     normal = false
                 }
-                console.log(data)
                 res.render('user/profile', { viewTitle: 'User Profile', user: data, member: normal, adminrole: admin })
             })
         } else {
@@ -43,10 +41,8 @@ module.exports = {
         if (req.session.membership == 'Admin')
             UserModel.addUser(UserData, function(data) {
                 if (data != 'Username / Email Exists') {
-                    console.log("Inserted")
                     return res.redirect('/dev/user/list')
                 } else {
-                    console.log("Failed")
                     return res.send("FAILED")
                 }
             })
@@ -57,7 +53,6 @@ module.exports = {
         let { id } = req.params
         if (req.session.membership == 'Admin')
             UserModel.destroyUser(id, function(data) {
-                console.log("Deleted!")
                 return res.redirect('/dev/user/list')
             })
         else
@@ -77,7 +72,6 @@ module.exports = {
         let { id } = req.params
         if (req.params.id == req.session.userid || req.session.membership == 'Admin')
             UserModel.updateUser(UserData, id, function(data) {
-                console.log("Edited!")
                 if (req.session.membership == 'Admin')
                     return res.redirect('/dev/user/list')
                 else

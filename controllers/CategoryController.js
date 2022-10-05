@@ -28,10 +28,8 @@ module.exports = {
         if (req.session.membership == 'Admin')
             CategoryModel.addCategory(CategoryData, function(data) {
                 if (data) {
-                    console.log("Inserted")
                     return res.redirect('/dev/category/list')
                 } else {
-                    console.log("Failed")
                     return res.send("FAILED")
                 }
             })
@@ -42,7 +40,6 @@ module.exports = {
         let { id } = req.params
         if (req.session.membership == 'Admin')
             CategoryModel.destroyCategory(id, function(data) {
-                console.log("Deleted!")
                 return res.redirect('/dev/category/list')
             })
         else
@@ -59,7 +56,6 @@ module.exports = {
         let { id } = req.params
         if (req.session.membership == 'Admin')
             CategoryModel.updateCategory(CategoryData, id, function(data) {
-                console.log("Edited!")
                 return res.redirect('/dev/category/list')
             })
         else

@@ -16,7 +16,6 @@ module.exports = {
                 req.session.membership = data[0].Membership
                 return res.redirect('/dev/home')
             } else {
-                console.log('wrong id or password')
                 return res.redirect('/dev/loginpage')
             }
         })

@@ -32,10 +32,8 @@ module.exports = {
         let PostData = req.body
         PostModel.addPost(PostData, function(data) {
             if (data) {
-                console.log("Inserted")
                 return res.redirect('/dev/post/list')
             } else {
-                console.log("Failed")
                 return res.send("FAILED")
             }
         })
@@ -44,7 +42,6 @@ module.exports = {
         let { id } = req.params
         if (req.session.membership == 'Admin')
             PostModel.destroyPost(id, function(data) {
-                console.log("Deleted!")
                 return res.redirect('/dev/post/list')
             })
         else
@@ -64,7 +61,6 @@ module.exports = {
         let { id } = req.params
         if (req.session.membership == 'Admin')
             PostModel.updatePost(PostData, id, function(data) {
-                console.log("Edited!")
                 return res.redirect('/dev/post/list')
             })
         else
