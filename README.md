@@ -11,7 +11,10 @@ May test on the website: https://b59qfht3fd.execute-api.ap-southeast-1.amazonaws
 3. Node Js
 4. HBS
 
-**Before Run the project, you should run npm i to install the modules first, so only make sure the project can work.**
+- **Before Run the project, you should run npm i to install the modules first, so only make sure the project can work.**
+- **Make Sure your .env file need to add auth0 Issuer Base Url, client id, Base Url and Secret**
+- **Make Sure your .env file need to add billplz api key**
+- **Make Sure your .env file need to add db host, port, user, pasword, database**
 
 Serverless will launch the lambda.js to run the project.
 
