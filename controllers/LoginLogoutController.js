@@ -91,6 +91,7 @@ module.exports = {
             if (data == 'Username Exists') {
                 return res.send("Username Exists")
             } else {
+                req.session.userid = data.insertId
                 return res.redirect('/dev/user/edit/' + data.insertId)
             }
         })
