@@ -11,6 +11,8 @@ May test on the website: https://b59qfht3fd.execute-api.ap-southeast-1.amazonaws
 3. Node Js
 4. HBS
 
+**Before Run the project, you should run npm i to install the modules first, so only make sure the project can work.**
+
 Serverless will launch the lambda.js to run the project.
 
 After AWS Lambda call the lambda.js --> lambda.universal,
